@@ -1,0 +1,10 @@
+Welcome to the Go playground.
+Concurrency is not parallelism.
+Goroutines are lightweight threads.
+Go makes 	systems programming fun.
+Never share memory by communicating.
+	Always communicate by sharing memory.
+This line contains the word magic.
+Replace all the magic in this line.
+Magic is just another word for abstraction.
+Let's Go and replace some magic!

@@ -2,10 +2,15 @@ package main
 
 import (
 	"bufio"
+	"fmt"
 	"log"
 	"os"
 	"sync"
 )
+
+func replacer(mapItem map[int]*string, wg *sync.WaitGroup) {
+
+}
 
 func main() {
 	var wg sync.WaitGroup
@@ -16,6 +21,13 @@ func main() {
 	}
 
 	fileScan := bufio.NewScanner(file_data)
+	num := 1
+	fileMap := make(map[int]string)
+	for fileScan.Scan() {
+		fileMap[num] = fileScan.Text()
+		num++
+		go replacer(&fileMap[num], &wg)
+	}
 
-	fileScan.Scan()
+	fmt.Println(fileMap)
 }
